@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="fa-IR">
+  
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" meta charset="UTF-8"> 
+</head>
+
+<body>
+
+
+  <style>
+
+
+    @font-face 
+          {
+    font-family: 'B Titr';
+    src: url('font/BTitrBold.woff2') format('woff2'),
+         url('font/BTitrBold.woff') format('woff'),
+         url('font/BTitrBold:ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    }
+
+
+
+    h1   {
+      font-size: 4.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 0, 0);
+     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
+    }
+    
+    h2   {
+      font-size: 3.0em; 
+      font-family: 'B Titr', Arial, Helvetica, sans-serif;
+      color: rgb(255, 0, 0);
+     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
+    }
+
+    h3   {
+      font-size: 2.4em; 
+      font-family: 'B Titr', Arial, Helvetica, sans-serif;
+      color: rgb(177, 177, 177);
+     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
+
+    }
+
+    body {
+      background-color: rgb(0, 0, 0);
+      text-align: center;
+      line-height: 75%;
+      font-weight: bold;
+    }
+
+
+
+    .blink {
+        animation: blink-animation 30s steps(10, start) infinite;
+        -webkit-animation: blink-animation 30s steps(10, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+
+
+
+  </style>
+
+
+
+<div class="blink">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<h1 id="Time"></h1>
+<h2 id="Date"></h1>
+<h3>1402-2024</h3>
+</div>
+
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+
+
+  const date = new Date();
+  const option = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+
+
+    /*   year: "numeric", */
+
+    }
+  document.getElementById("Time").innerHTML = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+  document.getElementById("Date").innerHTML = date.toLocaleDateString("fa-IR", option);
+
+}
+</script>
+
+
+</body>
+</html>
