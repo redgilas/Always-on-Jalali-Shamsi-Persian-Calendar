@@ -27,7 +27,7 @@
 تاریخ شمسی و تاریخ میلادی بطور اتوماتیک تغییر نمی کنند و باید به صورت دستی در کد ها تغییر داده شوند
 
 آدرس صفحه اصلی ساعت و تقویم را از اینجا ببینید 
-[آدرس صفحه اصلی ساعت و تقویم را از اینجا ببینید]([آدرس_وبسایت](https://redgilas.github.io/Always-on-Jalali-Shamsi-Persian-Calendar/))
+[آدرس صفحه اصلی ساعت و تقویم را از اینجا ببینید](https://redgilas.github.io/Always-on-Jalali-Shamsi-Persian-Calendar/)
 
 https://redgilas.github.io/Always-on-Jalali-Shamsi-Persian-Calendar/
 
