@@ -1,19 +1,24 @@
 <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه انتخاب  نوع تقویم و ساعت فارسی</title>
+    <style>
+        /* CSS برای استایل‌دهی */
+        body {
+            background-color: #000000; /* پس‌زمینه مشکی */
+            color: #ffffff; /* رنگ متن سفید برای خوانایی بهتر */
+            font-family: 'B Titr', Arial, Helvetica, sans-serif; /* فونت ساده فارسی */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* محتوا را در مرکز افقی قرار می‌دهد */
+            align-items: center; /* محتوا را در مرکز عمودی قرار می‌دهد */
+            min-height: 100vh; /* ارتفاع صفحه را به اندازه کل پنجره مرورگر تنظیم می‌کند */
+        }
 
-<html lang="fa-IR">
-  
-<head> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" meta charset="UTF-8"> 
-</head>
-
-<body>
-
-
-  <style>
-
-
-    @font-face 
-          {
+        @font-face  {
     font-family: 'B Titr';
     src: url('font/BTitrBold.woff2') format('woff2'),
          url('font/BTitrBold.woff') format('woff'),
@@ -21,96 +26,75 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-    }
-
-
-
-    h1   {
-      font-size: 4.5em;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(255, 0, 0);
-     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
-    }
-    
-    h2   {
-      font-size: 3.0em; 
-      font-family: 'B Titr', Arial, Helvetica, sans-serif;
-      color: rgb(255, 0, 0);
-     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
-    }
-
-    h3   {
-      font-size: 2.4em; 
-      font-family: 'B Titr', Arial, Helvetica, sans-serif;
-      color: rgb(177, 177, 177);
-     /* text-shadow: 0px 1px 0px rgb(255, 255, 255); */
-
-    }
-
-    body {
-      background-color: rgb(0, 0, 0);
-      text-align: center;
-      line-height: 75%;
-      font-weight: bold;
-    }
-
-
-
-    .blink {
-        animation: blink-animation 30s steps(10, start) infinite;
-        -webkit-animation: blink-animation 30s steps(10, start) infinite;
-      }
-      @keyframes blink-animation {
-        to {
-          visibility: hidden;
         }
-      }
-      @-webkit-keyframes blink-animation {
-        to {
-          visibility: hidden;
+
+
+        .container {
+            display: flex; /* برای قرار دادن دو ستون در کنار هم */
+            gap: 50px; /* فاصله بین دو ستون */
+            padding: 20px;
         }
-      }
 
+        .content-box {
+            text-align: center; /* محتوای داخل هر ستون را وسط‌چین می‌کند */
+            max-width: 300px;
+        }
 
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-  </style>
+        img {
+            width: 100%; /* عرض عکس را به اندازه عرض ستون تنظیم می‌کند */
+            height: auto;
+            border: 2px solid #333333; /* یک حاشیه کم‌رنگ دور عکس */
+            border-radius: 8px;
+            transition: transform 0.3s ease; /* انیمیشن برای هاور */
+        }
 
+        img:hover {
+            transform: scale(1.05); /* کمی بزرگ شدن عکس هنگام نگه داشتن موس */
+            border-color: #00aaff; /* تغییر رنگ حاشیه */
+        }
 
+        /* استایل برای لینک‌ها */
+        a {
+            color: #ffffff; /* رنگ لینک سفید */
+            text-decoration: none; /* خط زیر لینک را حذف می‌کند */
+            display: block; /* برای اینکه لینک تمام عرض عنوان را بگیرد */
+        }
 
-<div class="blink">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<h1 id="Time"></h1>
-<h2 id="Date"></h1>
-<h3>1402-2024</h3>
-</div>
+        a:hover {
+            color: #00aaff; /* رنگ آبی روشن هنگام نگه داشتن موس */
+        }
+    </style>
+</head>
+<body>
 
-<script>
-setInterval(myTimer, 1000);
+    <div class="container">
 
-function myTimer() {
+        <div class="content-box">
+            <a href="white_weather.html" target="_blank">
+                <h2>تقویم و ساعت سفید با آب و هوا</h2>
+            </a>
+            <a href="white_weather.html" target="_blank">
+                <img src="white_weather.png" alt="تصویر اول">
+            </a>
+            <p>روی عکس یا نوشته کلیک کنید</p>
+        </div>
 
+        <div class="content-box">
+            <a href="jalali_red_no_weather.html" target="_blank">
+                <h2>تقویم و ساعت قرمز بدون آب و هوا</h2>
+            </a>
+            <a href="jalali_red_no_weather.html" target="_blank">
+                <img src="jalali_red_no_weather.png" alt="تصویر دوم">
+            </a>
+            <p>روی عکس یا نوشته کلیک کنید</p>
+        </div>
 
-  const date = new Date();
-  const option = {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-
-
-    /*   year: "numeric", */
-
-    }
-  document.getElementById("Time").innerHTML = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-  document.getElementById("Date").innerHTML = date.toLocaleDateString("fa-IR", option);
-
-}
-</script>
-
+    </div>
 
 </body>
 </html>
